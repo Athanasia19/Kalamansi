@@ -84,9 +84,6 @@ exports.createPlant = async (req, res) => {
   });
 };
 
-const Plant = require('../models/plant');
-const cloudinary = require('cloudinary').v2;
-
 exports.updatePlant = async (req, res) => {
   const { id } = req.params;
   const {

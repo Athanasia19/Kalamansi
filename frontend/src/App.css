@@ -1,5 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+html,
+body {
+  font-family: 'Amazon Ember';
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f500;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px;
+  background-clip: padding-box;
+  border-radius: 5px;
+}
+
 .App {
   text-align: center;
+  background-color: #ffffff;
+  font-family: 'open-sans', sans-serif;
+  width: 100%;
+  max-width: 100%;
+  /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+  flex-grow: 1
 }
 
 .App-logo {
@@ -14,7 +56,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,6 +67,7 @@
 }
 
 .App-link {
+
   color: #61dafb;
 }
 
@@ -32,7 +75,85 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.card {
+  width: 150px;
+  height: 154px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe,
+    -15px -15px 30px #ffffff;
+}
+
+.btn-green {
+  background-color: #4AA032;
+  color: #1E4D2E;
+  border: none;
+  float: right;
+  margin-right: 20%;
+  margin-top: 5%;
+}
+
+.btn-green:hover {
+  background-color: #1E4D2E;
+  color: white;
+  border: none;
+}
+
+.footer {
+  background-color: white;
+  color: #4AA032;
+  text-align: center;
+  padding: 10px;
+}
+
+.card-stack {
+  display: flex;
+  gap: 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  font-family: 'League Spartan';
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'League Spartan';
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.gap-size{
+  padding-left: 15%;
+}
+
+.image-card{
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  box-shadow: 15px 15px 30px #bebebe,
+    -15px -15px 30px #ffffff;
 }

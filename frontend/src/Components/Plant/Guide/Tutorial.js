@@ -87,7 +87,7 @@ const Guide = () => {
                 <div key={index} className="m-10">
                   <button className="card" onClick={() => openModal(index)}>
                     <img
-                      src={`images/${index}.jpg`}
+                      src={`images/${index}.png`}
                       alt={`${index}`}
                       className="w-full h-full object-cover rounded-md image-card"
                     />
@@ -114,29 +114,39 @@ const Guide = () => {
                       <Dialog.Overlay className="fixed inset-0 bg-black opacity-50" />
                     </Transition.Child>
 
-                    <div
-                      className="inline-block my-8 w-full max-w-md overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl mt-40 mx-auto"
-                      style={{ fontFamily: "League Spartan" }}
+                    <Transition.Child
+                      as={React.Fragment}
+                      enter="ease-out duration-300"
+                      enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                      enterTo="opacity-100 translate-y-0 sm:scale-100"
+                      leave="ease-in duration-200"
+                      leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+                      leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                     >
-                      <Dialog.Title
-                        as="h3"
-                        className="text-2xl font-medium leading-6 text-gray-900 p-6"
-                        style={{ color: "#58B741" }}
+                      <div
+                        className="inline-block my-8 w-full max-w-md overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl mt-40 mx-auto"
+                        style={{ fontFamily: "League Spartan" }}
                       >
-                        {selectedCard && (
-                          <>
-                            <h1>{cardContent[selectedCard - 1].title}</h1>{" "}
-                          </>
-                        )}
-                      </Dialog.Title>
-                      <div className="bg-gray-50 p-6">
-                        {selectedCard && (
-                          <>
-                            <p>{cardContent[selectedCard - 1].content}</p>
-                          </>
-                        )}
+                        <Dialog.Title
+                          as="h3"
+                          className="text-2xl font-medium leading-6 text-gray-900 p-6"
+                          style={{ color: "#58B741" }}
+                        >
+                          {selectedCard && (
+                            <>
+                              <h1>{cardContent[selectedCard - 1].title}</h1>{" "}
+                            </>
+                          )}
+                        </Dialog.Title>
+                        <div className="bg-gray-50 p-6">
+                          {selectedCard && (
+                            <>
+                              <p>{cardContent[selectedCard - 1].content}</p>
+                            </>
+                          )}
+                        </div>
                       </div>
-                    </div>
+                    </Transition.Child>
                   </div>
                 </Dialog>
               </Transition>

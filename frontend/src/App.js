@@ -6,7 +6,7 @@ import Predict from "./Components/Predict/predict";
 import Guide from "./Components/Plant/Guide/Tutorial";
 import Header from "./Components/Layout/Header";
 import Footer from "./Components/Layout/Footer";
-import About from "./Components/Admin/About";
+import About from "./Components/About";
 // import Register from './Components/User/register';
 import Login from "./Components/User/login";
 // import ProtectedRoute from "./Components/Route/ProtectedRoute";
@@ -24,7 +24,7 @@ function App() {
           <Route path="/predict" element={<Predict exact="true" />} />
           <Route path="/guide" element={<Guide exact="true" />} />
           <Route path="/login" element={<Login exact="true" />} />
-
+          <Route path="/about" element={<About exact="true" />} />
           {/* <Route path="/register" element={<Register />} /> */}
         </Routes>
       </Router>

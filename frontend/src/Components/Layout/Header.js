@@ -40,15 +40,41 @@ const Header = () => {
                 Plant
               </Link>
             </li>
-            <li>
-              <Link
-                to="/predict"
-                style={{ textDecoration: "none", color: "#58B741" }}
-                className="flex items-center"
-              >
-                Predict
-              </Link>
-            </li>
+            <div className="dropdown dropdown-end">
+              <li >
+                <Link
+                  to="#"
+                  tabIndex={0}
+                  style={{ textDecoration: "none", color: "#58B741" }}
+                  className="flex items-center"
+                >
+                  Predict
+                </Link>
+                <ul
+                  tabIndex={0}
+                  className="mt-10 z-[1] p-2 shadow menu menu-sm dropdown-content bg-100 rounded-box w-30"
+                >
+                  <li>
+                    <Link
+                      to="/predict/quality"
+                      style={{ textDecoration: "none", color: "#58B741" }}
+                      className="flex items-center"
+                    >
+                      Quality
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/predict/disease"
+                      style={{ textDecoration: "none", color: "#58B741" }}
+                      className="flex items-center"
+                    >
+                      Disease
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            </div>
             <li>
               <Link
                 to="/guide"
@@ -93,7 +119,7 @@ const Header = () => {
               tabIndex={0}
               className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-100 rounded-box w-52"
             >
-              <li>
+               <li>
                 <Link
                   to="/profile"
                   style={{ textDecoration: "none", color: "#58B741" }}

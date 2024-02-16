@@ -7,7 +7,6 @@ const Footer = () => {
         <a className="link link-hover" href="/">Home</a>
         <a className="link link-hover" href="/about">About us</a>
         <a className="link link-hover" href="/plant">Plant</a>
-        <a className="link link-hover" href="/predict">Predict</a>
         <a className="link link-hover" href="/guide">Guide</a>
       </nav>
       <nav>
@@ -48,7 +47,7 @@ const Footer = () => {
         </div>
       </nav>
       <aside>
-        <p>Copyright © 2024 - All right reserved by Kaalamansi</p>
+        <p>Copyright © 2024 - All right reserved by Kaalaman.si</p>
       </aside>
     </footer>
   );

@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
+
+
 html,
 body {
   font-family: 'Amazon Ember';
@@ -160,3 +162,4 @@ body {
   height: 100%;
   border-radius: 30px;
 }
+
